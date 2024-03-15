@@ -1,0 +1,26 @@
+<html>
+  <head></head>
+  <body>
+   <center>
+    <h1>Contact Form</h1>
+    <table border=15>
+       {% if cont %}
+           <thead>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Website</th>
+            <th>Mobileno</th>
+           </thead>
+          {%for k in cont%}
+            <tr>
+              <td>{{k.username}}</td>
+              <td>{{k.email}}</td>
+              <td>{{k.website}}</td>
+              <td>{{k.mobileno}}</td>
+            </tr>
+          {% endfor %}
+       {% endif %}
+    </center>
+    </table>
+  </body>
+</html>

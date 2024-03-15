@@ -1,0 +1,34 @@
+<html>
+  <head></head>
+  <body>
+   <center>
+    <h1>Order Form</h1>
+    <table border=15>
+       {% if ordd %}
+           <thead>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Extra</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Foodname</th>
+            <th>Howmuch</th>
+            <th>Message</th>
+           </thead>
+          {%for k in ordd%}
+            <tr>
+              <td>{{k.name}}</td>
+              <td>{{k.phone}}</td>
+              <td>{{k.extra}}</td>
+              <td>{{k.address}}</td>
+              <td>{{k.email}}</td>
+              <td>{{k.foodname}}</td>
+              <td>{{k.howmuch}}</td>
+              <td>{{k.message}}</td>
+            </tr>
+          {% endfor %}
+       {% endif %}
+    </center>
+    </table>
+  </body>
+</html>

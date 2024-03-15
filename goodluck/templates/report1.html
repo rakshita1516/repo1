@@ -1,0 +1,22 @@
+<html>
+  <head></head>
+  <body>
+   <center>
+    <h1>Login Form</h1>
+    <table border=15>
+       {% if log %}
+           <thead>
+            <th>Username</th>
+            <th>Password</th>
+           </thead>
+          {%for k in log%}
+            <tr>
+              <td>{{k.username}}</td>
+              <td>{{k.password}}</td>
+            </tr>
+          {% endfor %}
+       {% endif %}
+    </center>
+    </table>
+  </body>
+</html>
